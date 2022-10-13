@@ -10,8 +10,7 @@ function addItem( item ) {
         basket.push( item );
         console.log( 'added' , item , 'to basket:', basket );
         return true;
-    }
-    else {
+    } else {
         console.log( 'Basket is full!' , item , "not added to current basket: ", basket );
         return false;
     }
@@ -26,7 +25,7 @@ addItem( "pants" );
 addItem( "hat" );
 
 function listItems () {
-    for ( items of basket ) {
+    for (let items of basket ) {
         console.log( items );
     } //end items of basket loop
     return true;
@@ -65,8 +64,7 @@ function removeItem ( item ) {
         basket.splice( index, 1 );
         console.log( 'Removed ' , item , 'from basket');
         return item;
-    }
-    else { 
+    } else { 
         console.log( item , 'not found in basket' );
         return null;
     }
